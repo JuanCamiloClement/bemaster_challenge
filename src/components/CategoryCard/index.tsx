@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./CategoryCard.scss"
 
 type TCategoryName = {
   categoryName: string
@@ -6,8 +7,8 @@ type TCategoryName = {
 
 const CategoryCard = ({ categoryName }: TCategoryName) => {
   return (
-    <Link to={`/content/${categoryName}`}>
-      <div>
+    <Link to={`/content/${categoryName}`} className="link-component">
+      <div className="card">
         {categoryName}
       </div>
     </Link >

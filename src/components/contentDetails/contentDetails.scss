@@ -1,0 +1,22 @@
+.detailspage-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4,
+  p {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .video-file {
+    width: 90vw;
+  }
+
+  @media(min-width: 1024px) {
+    .video-file {
+      max-width: 1000px;
+    }
+  }
+}

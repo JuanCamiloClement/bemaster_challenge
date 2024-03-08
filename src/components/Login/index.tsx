@@ -19,8 +19,8 @@ const Login = () => {
   const userFromContext = useContext(LoggedUserContext);
 
   const handleChange = (e: FormEvent<HTMLInputElement>) => {
-    dispatch(fillOutForm({ ...store, fieldName: [e.currentTarget.name], value: e.currentTarget.value }))
-    dispatch(defineErrors({ ...errors, fieldName: [e.currentTarget.name], value: e.currentTarget.value }))
+    dispatch(fillOutForm({ ...store, fieldName: [e.currentTarget.name], value: e.currentTarget.value }));
+    dispatch(defineErrors({ ...errors, fieldName: [e.currentTarget.name], value: e.currentTarget.value }));
   }
 
   const handleSubmit = (e: FormEvent) => {
@@ -35,12 +35,15 @@ const Login = () => {
       cookies.set("email", registeredUser.email, { path: "/" });
       userFromContext?.setLoggedUser(registeredUser);
       navigate("/home");
+      dispatch(fillOutForm({ fieldName: "password", value: "" }));
+      dispatch(fillOutForm({ fieldName: "email", value: "" }));
     }
   }
 
   return (
-    <div>
-      <form action="" onSubmit={handleSubmit}>
+    <div className="form-container">
+      <form action="" className="login-form" onSubmit={handleSubmit}>
+        <h4 className="form-title">Login</h4>
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -49,6 +52,7 @@ const Login = () => {
           value={store.email}
           onChange={handleChange}
           required
+          className="form-input"
         />
         <label htmlFor="password">Contraseña:</label>
         <input
@@ -58,6 +62,7 @@ const Login = () => {
           value={store.password}
           onChange={handleChange}
           required
+          className="form-input"
         />
         {
           Object.values(errors).map((error, index) => {
@@ -68,7 +73,7 @@ const Login = () => {
             );
           })
         }
-        <button type="submit">Login</button>
+        <button type="submit" className="login-button">Login</button>
       </form>
     </div>
   )

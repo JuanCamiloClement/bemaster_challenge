@@ -1,0 +1,29 @@
+.homepage-container {
+  width: 100%;
+
+  h4 {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cards-container {
+    margin: auto;
+    max-width: 370px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media(min-width: 768px) {
+    .cards-container {
+      max-width: 550px;
+    }
+  }
+
+  @media(min-width: 1024px) {
+    .cards-container {
+      max-width: 1000px;
+    }
+  }
+}

@@ -4,6 +4,8 @@ import Login from '../components/Login';
 import Home from '../components/Home';
 import ContentCategory from '../components/contentCategory';
 import ContentDetails from '../components/contentDetails';
+import About from '../components/About';
+import Contact from '../components/Contact';
 import PrivateRoute from '../components/PrivateRoute';
 import IfNotLogged from '../components/IfNotLogged';
 
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <ContentDetails />
           </PrivateRoute>
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       }
     ]
   }

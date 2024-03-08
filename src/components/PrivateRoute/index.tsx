@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import { Navigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 
 type TChildren = {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const PrivateRoute = ({ children }: TChildren) => {

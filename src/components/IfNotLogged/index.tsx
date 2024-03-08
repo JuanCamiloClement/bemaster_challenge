@@ -1,7 +1,12 @@
+import { ReactNode } from "react";
 import { Navigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 
-const IfNotLogged = ({ children }) => {
+type TChildren = {
+  children: ReactNode
+}
+
+const IfNotLogged = ({ children }: TChildren) => {
   const cookies = new Cookies();
   const email = cookies.get("email");
   const firstName = cookies.get("firstName");

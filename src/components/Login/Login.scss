@@ -1,3 +1,77 @@
 .error-message {
   color: red;
 }
+
+.form-container {
+  /* Position */
+  /* Margin, padding and width */
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  /* Display */
+  /* Background */
+  /* Font and text*/
+  /* Border */
+  border: solid 1px black;
+  border-radius: 10px;
+
+  /* Cursor */
+  .login-form {
+    /* Position */
+    /* Margin, padding and width */
+    /* Display */
+    display: flex;
+    flex-direction: column;
+
+    /* Background */
+    /* Font and text*/
+    /* Border */
+    /* Cursor */
+    .form-title {
+      margin: 10px auto;
+    }
+
+    .form-input {
+      /* Position */
+      /* Margin, padding and width */
+      margin-bottom: 10px;
+      /* Display */
+      /* Background */
+      /* Font and text*/
+      /* Border */
+      /* Cursor */
+    }
+
+    .login-button {
+      all: unset;
+      /* Position */
+      /* Margin, padding and width */
+      margin: auto;
+      width: 60px;
+      height: 30px;
+      /* Display */
+      /* Background */
+      background-color: black;
+      /* Font and text*/
+      color: white;
+      text-align: center;
+      /* Border */
+      border-radius: 5px;
+      /* Cursor */
+      cursor: pointer;
+
+    }
+
+    .login-button:hover {
+      background-color: grey;
+    }
+  }
+}
+
+/* Position */
+/* Margin, padding and width */
+/* Display */
+/* Background */
+/* Font and text*/
+/* Border */
+/* Cursor */

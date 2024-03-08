@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { data } from "../../assets/data/index";
+import "./contentCategory.scss"
 
 type TVideo = {
   name: string,
@@ -31,14 +32,14 @@ const ContentCategory = () => {
   }, [category]);
 
   return (
-    <div>
-      <h1>{category}</h1>
-      <div>
+    <div className="categorypage-container">
+      <h4>Categoría: {category}</h4>
+      <div className="names-container">
         {
           currentCategory.content.map((video: TVideo, index) => {
             return (
-              <Link to={`/content/${category}/${video.name}`} key={index}>
-                <div>
+              <Link to={`/content/${category}/${video.name}`} className="link-component" key={index}>
+                <div className="video-name">
                   {video.name}
                 </div>
               </Link>

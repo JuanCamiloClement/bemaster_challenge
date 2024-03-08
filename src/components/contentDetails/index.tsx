@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { data } from "../../assets/data/index";
+import "./contentDetails.scss"
 
 type TVideo = {
   name: string,
@@ -27,11 +28,11 @@ const ContentDetails = () => {
   }, [category, filename])
 
   return (
-    <div>
-      {pageContent.name}
-      <video width="300" height="auto" controls>
-        <source src={pageContent.file} type="video/mp4" />
-      </video>
+    <div className="detailspage-container">
+      <h4>{pageContent.name}</h4>
+      <video src={pageContent.file} className="video-file" controls />
+      <p>Detalles:</p>
+      <p>{pageContent.info}</p>
     </div>
   );
 };

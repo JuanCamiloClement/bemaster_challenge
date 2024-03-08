@@ -1,0 +1,99 @@
+@mixin flex-base-conditions($direction: row, $space: space-evenly) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $space;
+  align-items: center;
+}
+
+.layout-container {
+  /* Position */
+  display: flex;
+  flex-direction: column;
+  /* Margin, padding and width */
+  width: 100%;
+  /* Font and text*/
+  font-family: sans-serif;
+
+  .header {
+    box-sizing: border-box;
+    /* Margin, padding and width */
+    padding: 5px;
+    width: 100%;
+    min-height: 5vh;
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Background */
+    background-color: #13131d;
+    /* Font and text*/
+    color: white;
+  }
+
+  .header-login {
+    box-sizing: border-box;
+    /* Margin, padding and width */
+    padding: 5px;
+    width: 100%;
+    min-height: 7vh;
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* Background */
+    background-color: #13131d;
+    /* Font and text*/
+    color: white;
+  }
+
+  .bemaster {
+    cursor: pointer;
+  }
+
+  .options-container {
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .logout-button {
+      all: unset;
+      /* Margin, padding and width */
+      margin: 5px;
+      padding: 5px;
+      /* Display */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Border */
+      border: solid 2px white;
+      border-radius: 50%;
+      /* Cursor */
+      cursor: pointer;
+    }
+
+    .header-option {
+      margin: 5px;
+      padding: 5px;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+/* Position */
+/* Margin, padding and width */
+/* Display */
+/* Background */
+/* Font and text*/
+/* Border */
+/* Cursor */
