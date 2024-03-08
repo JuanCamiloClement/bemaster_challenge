@@ -19,11 +19,11 @@ The things you will need to install the software are a computer that isn't too o
 
 1. Clone the repository to your local machine: 
 ```
-git clone git@github.com:JuanCamiloClement/challenge-app.git
+git clone git@github.com:JuanCamiloClement/bemaster_challenge.git
 ```
-2. Change directory to /challenge-app:
+2. Change directory to /bemaster_app:
 ```
-cd challenge-app
+cd bemaster_app
 ```
 
 3. Install the dependencies:
@@ -42,7 +42,7 @@ npm install
 
 Make sure to be in the repository:
 ```
-cd challenge-app
+cd bemaster_app
 ```
 Once there, execute
 ```
